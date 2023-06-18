@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="col">
+    </div>
+    <hr />
+    <form action="" class="row">
+      <div class="form-group col-md-2">
+        <label for="nombre" class="visually-hidden">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="nombreInput">
+      </div>
+      <div class="form-group col-md-2">
+        <label class="visually-hidden">Apellido</label>
+        <input type="text" name="apellido" id="apellido" placeholder="apellido" class="form-control"
+          [(ngModel)]="apellidoInput">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary" (click)="agregarPersona()">Agregar</button>
+      </div>
+    </form>
+
