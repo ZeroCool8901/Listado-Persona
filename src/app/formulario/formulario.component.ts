@@ -11,6 +11,9 @@ import { PersonasService } from '../personasServices';
 export class FormularioComponent {
 
   constructor(private loggingService: LoggingService, private personasService: PersonasService){
+    this.personasService.saludar.subscribe(
+      (indice: number) => alert("El indice es " + (indice + 1))
+    );
 
   }
 
@@ -30,7 +33,7 @@ export class FormularioComponent {
 
     agregarPersona(){
     let persona1 = new Persona(this.nombre.nativeElement.value, this.apellido.nativeElement.value)
-    this.loggingService.enviaMensajeAConsola("Enviamos una persona llamada: " + persona1.nombre)
+    //this.loggingService.enviaMensajeAConsola("Enviamos una persona llamada: " + persona1.nombre)
     //this.personaCreada.emit(persona1)
     this.personasService.agregarPersona(persona1);
   }
